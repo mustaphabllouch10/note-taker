@@ -1,0 +1,83 @@
+.note-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    gap: 1.25rem;
+}
+
+.note-form input,
+.note-form textarea {
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.note-form input::placeholder,
+.note-form textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+    background: var(--bg-primary);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.note-form button {
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.note-form button:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.note-form button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .note-form {
+        max-width: 100%;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .note-form input,
+    .note-form textarea {
+        padding: 0.75rem;
+    }
+    
+    .note-form button {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}

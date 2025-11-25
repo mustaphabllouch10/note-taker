@@ -11,12 +11,12 @@ export default function NoteForm({ setGetNotes , getNotes }) {
         event.target.reset();
     }
     return(
-        <>
+        <div className="note-form-container">
             <form className="note-form" onSubmit={(event) => handleSubmit(event)}>
-                <input type="text" placeholder="note title" />
-                <textarea placeholder="note content"></textarea>
+                <input type="text" placeholder="note title" required />
+                <textarea placeholder="note content" required></textarea>
                 <button type="submit">save note</button>
             </form>
-        </>
+        </div>
     )
 }

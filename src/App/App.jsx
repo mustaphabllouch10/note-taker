@@ -15,7 +15,7 @@ export default function App() {
                     <NoteForm getNotes={getNotes} setGetNotes={setGetNotes} />
                 </section>
                 <section className="note-cards-section">
-                    <NoteCard getNotes={getNotes} />
+                    <NoteCard getNotes={getNotes} setGetNotes={setGetNotes} />
                 </section>
             </main>
         </>
